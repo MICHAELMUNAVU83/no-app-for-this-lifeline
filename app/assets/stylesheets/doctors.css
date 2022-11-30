@@ -1,5 +1,13 @@
 body{
     overflow-x: hidden;
+
+}
+.splash-intro{
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
 }
 
 .splash{
@@ -10,17 +18,21 @@ body{
     height: 100vh;
 }
 
-.splash-image{
-    background-image: url(/assets/logo.png);
+.logo-img{
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 20px;
+
 }
 
 .splash-text{
     padding:2rem;
     font-size: 2rem;
-    font-weight: 600;
+    font-weight: bold !important;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     width:50%;
     border-radius: 10px;
+    color: #fff;
 }
 
 .splash-button{
@@ -39,4 +51,38 @@ body{
     margin-left: 4rem;
     border-radius: 2rem !important;
     padding: 0.45rem 1rem !important;
+}
+
+.login-page{
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('login.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+}
+
+.account{
+    font-size: 0.7rem;
+}
+
+.form-input{
+    border-radius: 10rem !important;
+    width:10rem;
+}
+
+
+.signup-content{
+    width: 50%;
+    margin: 1rem auto;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
