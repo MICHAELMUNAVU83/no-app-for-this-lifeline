@@ -4,7 +4,7 @@
 Lifeline medical records is a solution that is used to create, update and read medical records whenever necessary.
 
 # ERD
-![ERD Diagram1 (2)](https://user-images.githubusercontent.com/48310207/201509109-1173932a-9df2-49ab-bf94-31e20ec3fb17.jpg)
+![latest-erd](https://user-images.githubusercontent.com/62090797/204808231-d873ce66-1b89-4abe-bcb1-696b983fc5f1.png)
 
 ## Cloning the Project
 git clone https://github.com/valuechainfactory/team_Limon_arsenal_life_line.git
