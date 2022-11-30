@@ -1,9 +1,12 @@
 class DoctorsController < ApplicationController
-  before_action :authenticate_doctor!
+
   def index
     @doctor = current_doctor
     percentage_of_conditions
     recent_patients
+  end
+
+  def splash
   end
 
   private

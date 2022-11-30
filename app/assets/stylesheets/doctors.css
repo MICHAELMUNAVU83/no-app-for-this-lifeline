@@ -1,0 +1,42 @@
+body{
+    overflow-x: hidden;
+}
+
+.splash{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+}
+
+.splash-image{
+    background-image: url(/assets/logo.png);
+}
+
+.splash-text{
+    padding:2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    width:50%;
+    border-radius: 10px;
+}
+
+.splash-button{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+
+}
+.sign-up{
+    margin-left: -4rem;
+    border-radius: 2rem !important;
+}
+
+.log-in{
+    margin-left: 4rem;
+    border-radius: 2rem !important;
+    padding: 0.45rem 1rem !important;
+}
