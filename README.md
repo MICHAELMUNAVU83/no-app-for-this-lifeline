@@ -71,12 +71,6 @@ rspec
 - Twitter: [@ger_abol](https://twitter.com/ger_abol)
 - LinkedIn: [David Ger](https://linkedin.com/in/david-ger-426b4576)
 
-👤 **Mercy Mugambi**
-
-- GitHub: [@mercymugambi](https://github.com/mercymugambi)
-- Twitter: [@MercyMugambi15](https://twitter.com/MercyMugambi15)
-- LinkedIn: [mercymugambi](https://www.linkedin.com/in/mercymugambi)
-
 👤 **Kiprotich Kimutai**
 
 - GitHub: [@Kimutai01](https://github.com/Kimutai01)
