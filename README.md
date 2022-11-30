@@ -86,7 +86,7 @@ rspec
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [https://github.com/valuechainfactory/team_Limon_arsenal_life_line/issues).
+Feel free to check the [Issues](https://github.com/MICHAELMUNAVU83/no-app-for-this-lifeline/issues).
 
 ## Show your support
 
