@@ -1,0 +1,47 @@
+<p style="color: green"><%= notice %></p>
+
+
+
+<h1 class="text-center">Patients</h1>
+
+
+
+<div id="patients">
+  <div class="main-content">
+    <div class="container mt-7">
+      <!-- Table -->
+        <div class="col">
+          <div class="card shadow">
+            <div class="table-responsive">
+              <table class="table align-items-center table-flush w-100">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col" class="sort" data-sort="name"></th>
+                    <th scope="col">first name</th>
+                    <th scope="col">last name</th>
+                    <th scope="col">National id</th>
+                    <th scope="col">gender</th>
+                    
+                  </tr>
+                </thead>
+              
+      
+  <% @patients.each do |patient| %>
+    <%= render "patients/indexpatient", patient: patient %>
+
+  <% end %>
+  </table>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+
+<div class="d-flex justify-content-center my-4">
+  <%= link_to "New patient", new_patient_path,class: "btn btn-primary text-align-center" %>
+</div>
+
+
+

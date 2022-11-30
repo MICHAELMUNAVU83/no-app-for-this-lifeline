@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Rails lifeline_meds: development">
+  <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.43">
+    <root id="1">
+      <ServerVersion>14.6</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="hello_dev"/>
+    <database id="3" parent="1" name="postgres"/>
+    <database id="4" parent="1" name="projo_development">
+      <Current>1</Current>
+    </database>
+    <database id="5" parent="1" name="rails_capstone_development"/>
+    <database id="6" parent="1" name="template0"/>
+    <database id="7" parent="1" name="template1"/>
+    <database id="8" parent="1" name="untitled3_development"/>
+  </database-model>
+</dataSource>

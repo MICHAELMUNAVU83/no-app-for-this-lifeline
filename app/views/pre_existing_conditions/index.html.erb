@@ -1,0 +1,29 @@
+<h1>Listing pre_existing_conditions</h1>
+
+<table>
+  <tr>
+    <th>Diabetes</th>
+    <th>Hypertension</th>
+    <th>Asthma</th>
+    <th>Patient</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pre_existing_conditions.each do |pre_existing_condition| %>
+  <tr>
+    <td><%= pre_existing_condition.diabetes %></td>
+    <td><%= pre_existing_condition.hypertension %></td>
+    <td><%= pre_existing_condition.asthma %></td>
+    <td><%= pre_existing_condition.patient %></td>
+    <td><%= link_to 'Show', [pre_existing_condition.patient, pre_existing_condition] %></td>
+    <td><%= link_to 'Edit', edit_patient_pre_existing_condition_path(pre_existing_condition.patient, pre_existing_condition) %></td>
+    <td><%= link_to 'Destroy', [pre_existing_condition.patient, pre_existing_condition], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pre existing condition', new_patient_pre_existing_condition_path(params[:patient_id]) %>

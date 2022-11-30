@@ -1,0 +1,30 @@
+<%= form_for([@pre_existing_condition.patient, @pre_existing_condition]) do |f| %>
+  <% if @pre_existing_condition.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pre_existing_condition.errors.count, "error") %> prohibited this pre_existing_condition from being saved:</h2>
+
+      <ul>
+      <% @pre_existing_condition.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    
+      <span> <%= f.check_box :diabetes %> Diabetes</span>
+  </div>
+  <div>
+    
+    <span> <%= f.check_box :hypertension %> Hypertension</span>
+  </div>
+  <div>
+    
+    <span> <%= f.check_box :asthma %> asthma</span>
+  </div>
+  
+    <div class="text-center">
+    <%= f.submit "Add", class: "btn btn-primary my-3" %>
+  </div>
+<% end %>

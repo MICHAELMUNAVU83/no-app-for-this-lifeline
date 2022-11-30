@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Diabetes:</b>
+  <%= @pre_existing_condition.diabetes %>
+</p>
+
+<p>
+  <b>Hypertension:</b>
+  <%= @pre_existing_condition.hypertension %>
+</p>
+
+<p>
+  <b>Asthma:</b>
+  <%= @pre_existing_condition.asthma %>
+</p>
+
+<p>
+  <b>Patient:</b>
+  <%= @pre_existing_condition.patient %>
+</p>
+
+
+<%= link_to 'Edit', edit_patient_pre_existing_condition_path(@pre_existing_condition.patient, @pre_existing_condition) %> |
+<%= link_to 'Back', patient_pre_existing_conditions_path(@pre_existing_condition.patient) %>

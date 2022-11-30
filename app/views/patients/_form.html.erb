@@ -1,0 +1,87 @@
+<%= form_with(model: patient) do |form| %>
+  <% if patient.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+        <% patient.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="text-center">   
+
+      <div class="form-group d-flex justify-content-center">
+        <div class="d-flex flex-column">
+
+              <%= form.label :date_of_birth, class: "form-label d-flex justify-content-start" %>
+              <%= form.date_field :date_of_birth , class: "form-control w-100" %>
+          </div>
+      </div>
+  
+      <div class="form-group d-flex justify-content-center">
+        <div class="d-flex flex-column">
+       
+          <%= form.label :first_name, class: "form-label d-flex justify-content-start" %>
+          <%= form.text_field :first_name , class: "form-control" %>
+          </div>
+      </div>
+
+      <div class="form-group d-flex justify-content-center">
+          <div class="d-flex flex-column">
+        
+            <%= form.label :last_name, class: "form-label d-flex justify-content-start" %>
+            <%= form.text_field :last_name , class: "form-control" %>
+            </div>
+      </div>
+
+     
+
+
+      <div class="form-group d-flex justify-content-center">
+          <div class="d-flex flex-column">
+                <label class="form-label d-flex justify-content-start">National Id Number</label>
+
+                <%= form.number_field :national_id , class: "form-control" %>
+            </div>
+      </div>
+
+   
+
+
+       
+      <div class="form-group d-flex justify-content-center">
+          <div class="d-flex flex-column">
+        
+                <%= form.label :telephone, class: "form-label d-flex justify-content-start" %>
+                <%= form.text_field :telephone , class: "form-control" %>
+            </div>
+      </div>
+
+
+      <div class="form-group d-flex justify-content-center">
+          <div class="d-flex flex-column">
+        
+                <%= form.label :gender, class: "form-label d-flex justify-content-start" %>
+                <%= form.text_field :gender , class: "form-control" %>
+            </div>
+      </div>
+         
+      <div class="form-group d-flex justify-content-center">
+          <div class="d-flex flex-column">
+        
+                <%= form.label :image, class: "form-label d-flex justify-content-start" %>
+                <%= form.file_field :image , class: "form-control" %>
+            </div>
+      </div>
+
+
+
+      <div>
+        <%= form.submit "Add a Patient", class: "btn btn-primary btn-lg" %>
+        </div>
+    
+
+<% end %>

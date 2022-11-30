@@ -1,0 +1,25 @@
+<h1>Listing food_allergies</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Patient</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @food_allergies.each do |food_allergy| %>
+  <tr>
+    <td><%= food_allergy.name %></td>
+    <td><%= food_allergy.patient %></td>
+    <td><%= link_to 'Show', [food_allergy.patient, food_allergy] %></td>
+    <td><%= link_to 'Edit', edit_patient_food_allergy_path(food_allergy.patient, food_allergy) %></td>
+    <td><%= link_to 'Destroy', [food_allergy.patient, food_allergy], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Food allergy', new_patient_food_allergy_path(params[:patient_id]) %>

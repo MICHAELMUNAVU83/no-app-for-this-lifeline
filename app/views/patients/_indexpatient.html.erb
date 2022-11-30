@@ -1,0 +1,41 @@
+<div id="<%= dom_id patient %>">
+<tbody>
+ <tr>
+                     <th scope="row">
+                      <div class="media align-items-center">
+                        <%= link_to patient_path(patient) , class: "avatar rounded-circle mr-3" do %>
+                        
+                         <%= image_tag  patient.image %>
+            
+                        <% end %>
+                        <div class="media-body">
+                          <span class="mb-0 text-sm"></span>
+                        </div>
+                      </div>
+                    </th>
+                    <td>
+                      <%= patient.first_name %>
+                    </td>
+                    <td>
+                      <span class="mb-0 text-sm"><%= patient.last_name %></span>
+                    
+                    </td>
+                    <td>
+                      <div class="d-flex align-items-center">
+                        <span class="mr-2"><%= patient.national_id %></span>
+                      </div>
+                    </td>
+                    <td>
+                      <span class="mb-0 text-sm"><%= patient.gender %></span>
+                    
+                    </td>
+                   
+                  </tr>
+</tbody>
+
+
+
+
+
+
+

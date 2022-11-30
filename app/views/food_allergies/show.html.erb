@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @food_allergy.name %>
+</p>
+
+<p>
+  <b>Patient:</b>
+  <%= @food_allergy.patient %>
+</p>
+
+
+<%= link_to 'Edit', edit_patient_food_allergy_path(@food_allergy.patient, @food_allergy) %> |
+<%= link_to 'Back', patient_food_allergies_path(@food_allergy.patient) %>

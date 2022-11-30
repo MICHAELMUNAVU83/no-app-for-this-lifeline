@@ -1,0 +1,23 @@
+<%= form_for([@drug_allergy.patient, @drug_allergy]) do |f| %>
+  <% if @drug_allergy.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@drug_allergy.errors.count, "error") %> prohibited this drug_allergy from being saved:</h2>
+
+      <ul>
+      <% @drug_allergy.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="text-center">
+        
+  <%= f.text_field :name %>
+</div>
+
+
+<div class="text-center">
+<%= f.submit  class: "btn btn-primary my-3" %>
+</div>
+<% end %>
