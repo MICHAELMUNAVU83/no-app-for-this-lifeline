@@ -1,13 +1,11 @@
 class DoctorsController < ApplicationController
-
   def index
     @doctor = current_doctor
     percentage_of_conditions
     recent_patients
   end
 
-  def splash
-  end
+  def splash; end
 
   private
 
