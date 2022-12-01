@@ -669,6 +669,13 @@ a.btn.disabled {
   background-color: #5e72e4;
 }
 
+select {
+  width: 15rem;
+  height: 2rem;
+  background-color: none;
+  border-radius: 5px;
+}
+
 .page-item.disabled .page-link {
   cursor: auto;
   pointer-events: none;
@@ -1641,8 +1648,9 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-  color: #7386d5;
-  background: #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  transform: scale(1.05);
 }
 
 #sidebar ul li.active > a,
