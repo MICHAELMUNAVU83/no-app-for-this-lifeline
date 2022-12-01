@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *=require font-awesome
  */
 /* stylelint-disable no-descending-specificity */
 /* stylelint-disable no-duplicate-selectors */

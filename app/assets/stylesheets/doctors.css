@@ -1,3 +1,5 @@
+
+
 body {
   overflow-x: hidden;
 }
@@ -7,10 +9,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  overflow-y: hidden;
   height: 100vh;
-
-
 }
 
 .splash {
@@ -18,7 +17,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 .logo-img {
@@ -74,7 +72,7 @@ body {
 
 .form-input {
   border-radius: 10rem !important;
-  width: 10rem;
+  max-width: 300px;
 }
 
 .signup-content {
@@ -93,3 +91,9 @@ body {
   display: none;
   margin-top: -2rem;
 }
+
+.home-icon{
+  color:white;
+}
+
+
