@@ -25,7 +25,7 @@
         </nav>
 
         <!-- Page Content  -->
-        <div id="content">
+        <div id="content" class="container">
 
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
@@ -64,13 +64,41 @@
                      <div class="birthdate">
                         <h5 class="header">Birthdate</h5>
                         <p> 6/6/2001 </p>
+                        <h5 class="header">Weight</h5>
+                        <p> 60 kg </p>
+                        
+                    </div>
+                    <div class="birthdate">
+                        <h5 class="header">Height</h5>
+                        <p> 181cm</p>
+                        <h5 class="header">Work phone</h5>
+                        <p> +254790841979 </p>
+                        
                     </div>
 
                 </div>
-            </section>
 
 
         </section>
+        <div class="container text-center">
+  <div class="more-info">
+    <div class="medical-history">
+      <h5 class="header">Medical History</h5>
+      <p> General medical history </p>
+    </div>
+    <div class="medical-history">
+      <h5 class="header--blue">Medical History</h5>
+      <p> General medical history </p>
+    </div>
+    <div class="medical-history">
+      <h5 class="header--purple">Medical History</h5>
+      <p> General medical history </p>
+    </div>
+    <div class="medical-history">
+      <h5 class="header--light">Medical History</h5>
+      <p> General medical history </p>
+    </div>
+</div>
     </div>
 
 </div>
@@ -81,35 +109,4 @@
 
     </div>
 
-    <section class= "patient-name">
-                <table class="table table-success table-striped table-bordered">
-                <tbody>
-                <tr>
 
-                    <tr>
-                    <th scope="row">National ID</th>
-                    <td><%= patient.national_id %></td>
-                    </tr>
-                    <tr>
-                    <th scope="row">Telephone</th>
-                    <td><%= patient.telephone %></td>
-                    </tr>
-                    <tr>
-                    <th scope="row"> Gender</th>
-                    <td><%= patient.gender %></td>
-                  
-                    </tr>
-                    
-                </tr>
-                    <tr>
-                    <th scope="row"> Blood Group</th>
-                    <td><%= patient.blood_group %></td>
-                    </tr>
-                    <%patient.next_of_kins.each_with_index do |next_of_kin , index| %>
-                    <tr>
-
-                    <th scope="row"> Next of Kin <%= index + 1 %></th>
-                    <td><%= next_of_kin.name %></td>
-                    </tr>
-                    <% end %>
-                </tbody>
