@@ -1,6 +1,7 @@
 # rubocop: disable Metrics/MethodLength
 
 class Patient < ApplicationRecord
+  has_many :next_of_kins
   has_many :drug_allergies
   has_many :food_allergies
   has_many :pre_existing_conditions
@@ -15,7 +16,7 @@ class Patient < ApplicationRecord
   def generate_qr
     qr_url = url_for(controller: 'patients',
                      action: 'show',
-                     id:,
+                     id: id,
                      only_path: false,
                      host: 'https://arsenaltop.herokuapp.com/',
                      source: 'from_qr')
