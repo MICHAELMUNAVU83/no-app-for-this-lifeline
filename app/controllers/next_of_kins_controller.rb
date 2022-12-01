@@ -1,6 +1,8 @@
 class NextOfKinsController < ApplicationController
   before_action :set_patient
   before_action :set_next_of_kin, only: %i[show edit update destroy]
+  before_action :authenticate_doctor!, only: %i[new edit create update]
+
 
   # GET patients/1/next_of_kins
   def index
