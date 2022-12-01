@@ -76,4 +76,5 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'font-awesome-rails'
 gem 'rqrcode', '~> 2.1'

@@ -1,6 +1,6 @@
+
+<%= render "layouts/navbar" %>
 <p style="color: green"><%= notice %></p>
-
-
 
 <h1 class="text-center">Patients</h1>
 
@@ -21,11 +21,11 @@
                     <th scope="col">last name</th>
                     <th scope="col">National id</th>
                     <th scope="col">gender</th>
-                    
+
                   </tr>
                 </thead>
-              
-      
+
+
   <% @patients.each do |patient| %>
     <%= render "patients/indexpatient", patient: patient %>
 
