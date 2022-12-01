@@ -39,4 +39,25 @@
   margin-left: 1.5rem;
 }
 
+.patient-line{
+  border-right: 1px solid grey;
+  height: 150px;
+  margin-top: 1.5rem;
+}
 
+.patient-name{
+  margin-left: 2.5rem;
+  color:#53adcb;
+}
+
+.patient-bio{
+  margin-left: 3rem;
+}
+
+.patient-bio h5{
+  color: #53adcb;
+}
+
+.patient-text{
+  color:#53cbad;
+}
