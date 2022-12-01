@@ -1,16 +1,20 @@
 
 # Lifeline Medical
 
-Lifeline medical records is a solution that is used to create, update and read medical records whenever necessary.
+Lifeline medical records is a solution that is designed to help medical professionals keep track of their patients' medical records and incase of emergencies, the patient's medical history can be accessed by the medical professionals using NFC technology.
 
 # ERD
-![ERD Diagram1 (2)](https://user-images.githubusercontent.com/48310207/201509109-1173932a-9df2-49ab-bf94-31e20ec3fb17.jpg)
+![latest-erd](https://user-images.githubusercontent.com/62090797/204808231-d873ce66-1b89-4abe-bcb1-696b983fc5f1.png)
+
+## Live Demo
+[Live Demo]()
+
 
 ## Cloning the Project
-git clone https://github.com/valuechainfactory/team_Limon_arsenal_life_line.git
+git clone https://github.com/MICHAELMUNAVU83/no-app-for-this-lifeline.git
 
 ```bash
-- cd team_Limon_arsenal_life_line
+- cd no-app-for-this-lifeline
 - rails s
 ```
 
@@ -19,7 +23,7 @@ Ruby 3.1.2 on Rails 7.0.4 <br>
 PostgreSQL
 
 ## Prerequisites
-Vscode or anyother Setup
+Vscode or any other Setup
 
 ## Install
 Ruby
@@ -46,7 +50,7 @@ rails db:migrate
 ```
 
 ## Run
-```bash 
+```bash
 bundle install
 
 rails s
