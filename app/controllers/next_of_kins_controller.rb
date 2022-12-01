@@ -25,7 +25,7 @@ class NextOfKinsController < ApplicationController
     @next_of_kin = @patient.next_of_kins.build(next_of_kin_params)
 
     if @next_of_kin.save
-      redirect_to([@next_of_kin.patient, @next_of_kin], notice: 'Next of kin was successfully created.')
+      redirect_to(@next_of_kin.patient)
     else
       render action: 'new'
     end
@@ -34,7 +34,7 @@ class NextOfKinsController < ApplicationController
   # PUT patients/1/next_of_kins/1
   def update
     if @next_of_kin.update_attributes(next_of_kin_params)
-      redirect_to([@next_of_kin.patient, @next_of_kin], notice: 'Next of kin was successfully updated.')
+      redirect_to patient_next_of_kin_path(@patient, @next_of_kin), notice: 'Next of kin was successfully updated.'
     else
       render action: 'edit'
     end

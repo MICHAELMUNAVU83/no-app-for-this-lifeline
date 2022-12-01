@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     resources :pre_existing_conditions
     resources :food_allergies
     resources :drug_allergies
+    resources :next_of_kins
   end
 
   devise_scope :doctor do

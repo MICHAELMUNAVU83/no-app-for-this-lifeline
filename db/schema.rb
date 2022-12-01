@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_01_095150) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_01_095547) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -73,6 +73,16 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_095150) do
     t.index ["patient_id"], name: "index_food_allergies_on_patient_id"
   end
 
+  create_table "next_of_kins", force: :cascade do |t|
+    t.string "name"
+    t.string "phone_number"
+    t.string "relation"
+    t.bigint "patient_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["patient_id"], name: "index_next_of_kins_on_patient_id"
+  end
+
   create_table "patients", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
@@ -105,6 +115,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_01_095150) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "drug_allergies", "patients"
   add_foreign_key "food_allergies", "patients"
+  add_foreign_key "next_of_kins", "patients"
   add_foreign_key "patients", "doctors"
   add_foreign_key "pre_existing_conditions", "patients"
 end
