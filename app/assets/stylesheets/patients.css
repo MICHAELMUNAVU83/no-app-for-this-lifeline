@@ -22,3 +22,21 @@
   margin-top: -15%;
   margin-left: 5rem;
 }
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+.patient-sidebar{
+  border-right: 5px solid #ccc;
+  height: 100vh;
+}
+
+.patient-title{
+  margin-left: 1.5rem;
+}
+
+
