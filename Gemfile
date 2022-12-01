@@ -77,3 +77,5 @@ group :test do
 end
 
 gem 'rqrcode', '~> 2.1'
+gem "font-awesome-rails"
+gem "font-awesome-sass", "~> 6.2.1"

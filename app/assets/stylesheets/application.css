@@ -12,12 +12,17 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
+ */
+ /*
+ *= require font-awesome
  */
 /* stylelint-disable no-descending-specificity */
 /* stylelint-disable no-duplicate-selectors */
 /* stylelint-disable declaration-block-no-duplicate-custom-properties */
 /* stylelint-disable csstree/validator */
 /* stylelint-disable declaration-block-no-duplicate-properties */
+
 :root {
   --blue: #5e72e4;
   --indigo: #5603ad;
