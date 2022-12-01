@@ -41,13 +41,12 @@
 
 .patient-line {
   border-right: 1px solid grey;
-  height: 150px;
-  margin-top: 1.5rem;
+  height: 200px;
 }
 
 .patient-name {
   margin-left: 2.5rem;
-  color: #53adcb;
+  color: #455257;
 }
 
 .patient-bio {
@@ -55,7 +54,7 @@
 }
 
 .patient-bio h5 {
-  color: #53adcb;
+  color: #283534;
 }
 
 .patient-text {
