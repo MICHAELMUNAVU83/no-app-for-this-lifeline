@@ -65,7 +65,7 @@
           <div class="d-flex flex-column">
         
                 <%= form.label :gender, class: "form-label d-flex justify-content-start" %>
-                <%= form.text_field :gender , class: "form-control" %>
+                <%= form.select :gender, options_for_select([ "Male", "Female", "Prefer not to say"]), class: "form-control" %>
             </div>
       </div>
       <div class="form-group d-flex justify-content-center">
