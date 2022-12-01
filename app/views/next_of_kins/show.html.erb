@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @next_of_kin.name %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%= @next_of_kin.phone_number %>
+</p>
+
+<p>
+  <b>Relation:</b>
+  <%= @next_of_kin.relation %>
+</p>
+
+<p>
+  <b>Patient:</b>
+  <%= @next_of_kin.patient %>
+</p>
+
+
+<%= link_to 'Edit', edit_patient_next_of_kin_path(@next_of_kin.patient, @next_of_kin) %> |
+<%= link_to 'Back', patient_next_of_kins_path(@next_of_kin.patient) %>

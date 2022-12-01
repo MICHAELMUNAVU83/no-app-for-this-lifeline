@@ -28,6 +28,25 @@
               <th scope="row"> Gender</th>
               <td><%= patient.gender %></td>
             </tr>
+            <tr>
+              <th scope="row">Resasitate</th>
+              <td><%= patient.dnr %></td>
+            </tr>
+            <tr>
+            <th scope="row">Infuse</th>
+            <td><%= patient.dni %></td>
+          </tr>
+            <tr>
+              <th scope="row"> Blood Group</th>
+              <td><%= patient.blood_group %></td>
+            </tr>
+            <%patient.next_of_kins.each_with_index do |next_of_kin , index| %>
+            <tr>
+               
+              <th scope="row"> Next of Kin <%= index + 1 %></th>
+              <td><%= next_of_kin.name %></td>
+            </tr>
+            <% end %>
           </tbody>
       </table>
     </section>
@@ -109,6 +128,7 @@
         <div class="add-buttons text-center" >
             <button class="btn btn-light"><%= link_to "Add food allergy" , new_patient_food_allergy_path(@patient) %></button>
             <button class="btn btn-light ms-5"><%= link_to "Add drug allergy" , new_patient_drug_allergy_path(@patient) %></button>
+            <button class="btn btn-light ms-5"><%= link_to "Add next of kin" , new_patient_next_of_kin_path(@patient) %></button>
         </div>
 
       </div>
