@@ -83,3 +83,8 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.splash-hide{
+  display: none;
+  margin-top: -2rem;
+}

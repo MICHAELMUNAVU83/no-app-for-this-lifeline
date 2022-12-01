@@ -1,6 +1,4 @@
 <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -9,7 +7,7 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <% if doctor_signed_in? %>
           <li class="nav-item">
-            <%= link_to "Home", root_path, class: "nav-link" %>
+            <%= link_to "Home", authenticated_root_path, class: "nav-link" %>
           </li>
              <li class="nav-item">
                <%= link_to "Patients", patients_path, class: "nav-link" %>
@@ -18,9 +16,11 @@
                <%= link_to "Add a patient", new_patient_path, class: "nav-link" %>
             </li>
         <% else %>
-           <div class="splash-image">
-           <%= image_tag "logo.png" , class: "logo-img" %>
-           <div>
+
+        # do not display
+          <li >
+            <%= link_to "Home", unauthenticated_root_path, class:"splash-hide" %>
+          </li>
     </div>
         <% end %>
 

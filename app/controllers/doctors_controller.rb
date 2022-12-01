@@ -24,4 +24,8 @@ class DoctorsController < ApplicationController
   def recent_patients
     @patients = Patient.where(doctor_id: current_doctor.id).last(5)
   end
+
+  def logout
+    redirect_to unauthenticated_root_path
+  end
 end
