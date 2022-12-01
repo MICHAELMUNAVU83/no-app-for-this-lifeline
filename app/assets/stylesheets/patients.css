@@ -23,41 +23,41 @@
   margin-left: 5rem;
 }
 
-.grid-container{
+.grid-container {
   display: grid;
   grid-template-columns: 20% 80%;
   grid-gap: 10px;
   padding: 10px;
 }
 
-.patient-sidebar{
+.patient-sidebar {
   border-right: 5px solid #ccc;
   height: 100vh;
 }
 
-.patient-title{
+.patient-title {
   margin-left: 1.5rem;
 }
 
-.patient-line{
+.patient-line {
   border-right: 1px solid grey;
   height: 150px;
   margin-top: 1.5rem;
 }
 
-.patient-name{
+.patient-name {
   margin-left: 2.5rem;
-  color:#53adcb;
-}
-
-.patient-bio{
-  margin-left: 3rem;
-}
-
-.patient-bio h5{
   color: #53adcb;
 }
 
-.patient-text{
-  color:#53cbad;
+.patient-bio {
+  margin-left: 3rem;
+}
+
+.patient-bio h5 {
+  color: #53adcb;
+}
+
+.patient-text {
+  color: #53cbad;
 }
