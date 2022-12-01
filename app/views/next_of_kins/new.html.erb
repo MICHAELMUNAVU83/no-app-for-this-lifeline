@@ -1,5 +1,9 @@
-<h1>New next_of_kin</h1>
-
+<h1 class="text-center">Add A Next Of Kin</h1>
+<div class ="d-flex justify-content-center">
 <%= render 'form' %>
+</div>
 
-<%= link_to 'Back', patient_next_of_kins_path(@next_of_kin.patient) %>
+
+<div class="d-flex justify-content-center mt-3">
+<%= link_to 'Back', patient_next_of_kins_path(@next_of_kin.patient) , class: "btn btn-danger text-center" %>
+</div>
