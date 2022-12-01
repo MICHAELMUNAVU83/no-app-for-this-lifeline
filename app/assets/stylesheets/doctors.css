@@ -7,6 +7,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  overflow-y: hidden;
+  height: 100vh;
+
+
 }
 
 .splash {
@@ -14,7 +18,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .logo-img {
@@ -25,7 +29,7 @@ body {
 
 .splash-text {
   padding: 2rem;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold !important;
   box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0 18px 36px -18px inset;
   width: 50%;
@@ -34,7 +38,8 @@ body {
 }
 
 .splash-button {
-  margin-top: 2rem;
+  margin-top: -2rem;
+  padding-bottom: 2rem;
   display: flex;
   justify-content: space-around;
   align-items: baseline;
