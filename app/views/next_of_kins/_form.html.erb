@@ -1,0 +1,33 @@
+<%= form_for([@next_of_kin.patient, @next_of_kin]) do |f| %>
+  <% if @next_of_kin.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@next_of_kin.errors.count, "error") %> prohibited this next_of_kin from being saved:</h2>
+
+      <ul>
+      <% @next_of_kin.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.text_field :phone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :relation %><br />
+    <%= f.text_field :relation %>
+  </div>
+  <div class="field">
+    <%= f.label :patient %><br />
+    <%= f.text_field :patient %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
