@@ -1,59 +1,51 @@
-<div class="container-fluid patient-page">
-    <div class="">
-        <section class="patient-main">
-            <div class="patient-details d-flex">
-                <div class="patient-header">
-                    <div class="patient-image">
-                        <%= image_tag patient.image, class: "img-fluid" %>
-                        <span class="patient-name"><%= patient.first_name %></span>
-                        <span class="patient-name"><%= patient.last_name %></span>
-                    </div>
+
+<div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+           <div class="splash-image">
+      <%= image_tag "lifeline-logo-white.png" , class: "logo-img" %>
+  </div>
+
+            <ul class="list-unstyled components text-light ">
+               
+                <li>
+                    <%= link_to "Home", authenticated_root_path , class:"text-decoration-none text-light" %>
+               </li>
+              
+              <li>
+                <%= link_to "Add A Patient" , new_patient_path , class:"text-decoration-none text-light" %>
+             </li>
+             <li>
+             <%= link_to "Sign Out", destroy_doctor_session_path, method: :delete , class:"text-decoration-none text-light" %>
+            </li>
+            <li>
+               <%= link_to "Show All Patients", patients_path , class: "text-decoration-none text-light" %>
+              </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                 
                 </div>
-                <div class="patient-line"></div>
-                <div class="patient-bio d-flex">
-                <section class= "patient-name">
-                <h4>Patient details </h4>
-                <table class="table table-success table-striped table-bordered">
-                <tbody>
-                <tr>
+            </nav>
 
-                    <tr>
-                    <th scope="row">National ID</th>
-                    <td><%= patient.national_id %></td>
-                    </tr>
-                    <tr>
-                    <th scope="row">Telephone</th>
-                    <td><%= patient.telephone %></td>
-                    </tr>
-                    <tr>
-                    <th scope="row"> Gender</th>
-                    <td><%= patient.gender %></td>
-                    </tr>
-                    <tr>
-                    <th scope="row">Resasitate</th>
-                    <td><%= patient.dnr %></td>
-                    </tr>
-                    <tr>
-                    <th scope="row">Infuse</th>
-                    <td><%= patient.dni %></td>
-                </tr>
-                    <tr>
-                    <th scope="row"> Blood Group</th>
-                    <td><%= patient.blood_group %></td>
-                    </tr>
-                    <%patient.next_of_kins.each_with_index do |next_of_kin , index| %>
-                    <tr>
-
-                    <th scope="row"> Next of Kin <%= index + 1 %></th>
-                    <td><%= next_of_kin.name %></td>
-                    </tr>
-                    <% end %>
-                </tbody>
-            </table>
-            </section>
-
-
-        </section>
-    </div>
+            <div class="patients--top">
+                
 
 </div>
+
+
+    </div>
