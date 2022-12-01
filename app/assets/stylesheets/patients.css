@@ -60,3 +60,14 @@
 .patient-text {
   color: #53cbad;
 }
+
+.patient-bio-cont {
+  margin-left: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+}
+
+.header {
+  color: rgb(32, 143, 32);
+}

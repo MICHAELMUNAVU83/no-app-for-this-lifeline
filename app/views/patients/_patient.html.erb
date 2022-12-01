@@ -52,9 +52,36 @@
                         <h4 class="patient-name text-center mx-3"><%= patient.first_name %> <%= patient.last_name %></h4>
                     </div>
                 </div>
-                <div class="patient-line mx-3"></div>
-                <div class="patient-bio d-flex">
-                <section class= "patient-name">
+                <div class="patient-line mx-4"></div>
+                <div class="patient-bio-cont">
+                    <div class="patients-info">
+                        <h5 class="header">Patients info</h5>
+                        <p> National ID: <%= patient.national_id %> </p>
+                        <p>telephone:<%= patient.telephone %></p>
+                        <p>blood group:<%= patient.blood_group %></p>
+                    </div>
+
+                     <div class="birthdate">
+                        <h5 class="header">Birthdate</h5>
+                        <p> 6/6/2001 </p>
+                    </div>
+
+                </div>
+            </section>
+
+
+        </section>
+    </div>
+
+</div>
+                
+
+</div>
+
+
+    </div>
+
+    <section class= "patient-name">
                 <table class="table table-success table-striped table-bordered">
                 <tbody>
                 <tr>
@@ -91,17 +118,3 @@
                     </tr>
                     <% end %>
                 </tbody>
-            </table>
-            </section>
-
-
-        </section>
-    </div>
-
-</div>
-                
-
-</div>
-
-
-    </div>
