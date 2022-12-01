@@ -21,6 +21,9 @@
              <li>
              <%= link_to "Sign Out", destroy_doctor_session_path, method: :delete , class:"text-decoration-none text-light" %>
             </li>
+            <li>
+               <%= link_to "Show All Patients", patients_path , class: "text-decoration-none text-light" %>
+              </li>
             </ul>
         </nav>
 
@@ -202,10 +205,6 @@
             </div>
 
 
-</div>
-
-<div class="text-center my-4">
-    <%= link_to "Show All Patients", patients_path , class: "btn btn-primary" %>
 </div>
         </div>
     </div>
