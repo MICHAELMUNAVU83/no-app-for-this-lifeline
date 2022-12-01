@@ -23,6 +23,12 @@
           <%= f.email_field :email, autofocus: true, autocomplete: "email" ,placeholder:"Email", class: "form-control form-input" %>
         </div>
     </div>
+
+    <div class="d-flex flex-row align-items-center mb-4">
+        <div class="form-outline flex-fill mb-0">
+          <%= f.text_field :phone_number, autofocus: true, autocomplete: "Phone Number" ,placeholder:"Phone Number", class: "form-control form-input" %>
+        </div>
+      </div>
       <div class="d-flex flex-row align-items-center mb-4">
         <div class="form-outline flex-fill mb-0">
           <%= f.text_field :national_doctor_id, autofocus: true, autocomplete: "Doctors ID" ,placeholder:"Doctor ID", class: "form-control form-input" %>

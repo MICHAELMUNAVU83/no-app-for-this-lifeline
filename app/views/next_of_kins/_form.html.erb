@@ -1,4 +1,7 @@
 <%= form_for([@next_of_kin.patient, @next_of_kin]) do |f| %>
+  <div class="splash-image">
+      <%= image_tag "logo.png" , class: "logo-img" %>
+  </div>
   <% if @next_of_kin.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@next_of_kin.errors.count, "error") %> prohibited this next_of_kin from being saved:</h2>
@@ -13,17 +16,18 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name , class: "form-control form-input" %>
   </div>
   <div class="field">
     <%= f.label :phone_number %><br />
-    <%= f.text_field :phone_number %>
+    <%= f.text_field :phone_number , class: "form-control form-input" %>
   </div>
   <div class="field">
+    
     <%= f.label :relation %><br />
-    <%= f.text_field :relation %>
+    <%= f.select :relation, options_for_select([["Father", "Father"], ["Mother", "Mother"], ["Brother", "Brother"], ["Sister", "Sister"], ["Uncle", "Uncle"], ["Aunt", "Aunt"] , ["Other", "Other"]]) %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="d-flex justify-content-center">
+    <%= f.submit "Add Next of Kin" , class: "btn btn-primary text-center my-3" %>
   </div>
 <% end %>
