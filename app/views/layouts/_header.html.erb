@@ -1,12 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
-    <% if doctor_signed_in? %> 
-     <h2 class="navbar-brand" > Welcome , <%= current_doctor.name %> </h2>
-    <% else %>
-      <h2 class="navbar-brand"> Not a member ? </h2>
-    <% end %>   
 
-    
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -23,16 +18,14 @@
                <%= link_to "Add a patient", new_patient_path, class: "nav-link" %>
             </li>
         <% else %>
-           <li class="nav-item">
-              <%= link_to "Sign up" , new_doctor_registration_path , class: "btn btn-outline-success mx-4"%>
-            </li>
-            <li class="nav-item">
-               <%= link_to "Sign in" , new_doctor_session_path , class: "btn btn-outline-success"%>
-            </li>
-        <% end %>    
+           <div class="splash-image">
+           <%= image_tag "logo.png" , class: "logo-img" %>
+           <div>
+    </div>
+        <% end %>
 
 
-        
+
        </ul>
        <% !if doctor_signed_in? %>
       <form class="d-flex" role="search">
@@ -40,7 +33,7 @@
 
       </form>
       <% end %>
-      
+
     </div>
   </div>
 </nav>
