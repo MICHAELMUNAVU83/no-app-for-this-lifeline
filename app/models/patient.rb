@@ -16,7 +16,7 @@ class Patient < ApplicationRecord
   def generate_qr
     qr_url = url_for(controller: 'patients',
                      action: 'show',
-                     id:self.id,
+                     id: id,
                      only_path: false,
                      host: 'https://arsenaltop.herokuapp.com/',
                      source: 'from_qr')
