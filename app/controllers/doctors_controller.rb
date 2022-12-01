@@ -14,7 +14,7 @@ class DoctorsController < ApplicationController
     @diabetes = PreExistingCondition.where(diabetes: true).count
     @hypertension = PreExistingCondition.where(hypertension: true).count
     @asthma = PreExistingCondition.where(asthma: true).count
-    @total = @diabetes + @hypertension + @asthma 
+    @total = @diabetes + @hypertension + @asthma
 
     if @diabetes.zero? && @hypertension.zero? && @asthma.zero?
 
@@ -23,11 +23,10 @@ class DoctorsController < ApplicationController
       @asthma_percentage = 0
     else
 
-    @diabetes_percentage = (@diabetes.to_f / @total * 100).round(2)
-    @hypertension_percentage = (@hypertension.to_f / @total * 100).round(2)
-    @asthma_percentage = (@asthma.to_f / @total * 100).round(2)
+      @diabetes_percentage = (@diabetes.to_f / @total * 100).round(2)
+      @hypertension_percentage = (@hypertension.to_f / @total * 100).round(2)
+      @asthma_percentage = (@asthma.to_f / @total * 100).round(2)
     end
-
   end
 
   def recent_patients
