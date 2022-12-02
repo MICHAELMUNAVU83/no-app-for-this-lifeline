@@ -106,27 +106,51 @@
   transform: scale(1.05);
 }
 
-@media screen and (max-width: 600px) {
+.hide {
+  display: none;
+}
+
+.image-fluid {
+  width: 100% !important;
+  height: 100px !important;
+  border-radius: 50%;
+  max-width: 300px !important;
+}
+
+@media screen and (max-width: 500px) {
   .patient-bio-cont {
     grid-template-columns: 1fr;
     grid-gap: 20px;
   }
+
   .patient-line {
     display: none;
   }
+
   .patient-details {
     display: flex;
-    flex-direction: column !important;
     text-align: center;
+    font-size: 12px;
+    margin-bottom: 1rem;
   }
-  patient-header {
+
+  .patient-header {
     display: flex;
     flex-direction: column !important;
     text-align: center !important;
-    padding-left: 100px !important;
+    border-right: 1px solid grey !important;
   }
+
   .more-info {
     grid-template-columns: 1fr;
     grid-gap: 20px;
+  }
+
+  .patients-info p {
+    margin: 0 !important;
+  }
+
+  .birthdate p {
+    margin: 0 !important;
   }
 }
