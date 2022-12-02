@@ -22,6 +22,11 @@
                <%= link_to "Show All Patients", patients_path , class: "text-decoration-none text-light" %>
               </li>
             </ul>
+            <div class="text-start  mb-5">
+                <p>
+                    <%= image_tag(patient.qr_code) if patient.qr_code.attached? %>
+                </p>
+                </div>
         </nav>
 
         <!-- Page Content  -->
@@ -32,7 +37,7 @@
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar</span>
+                        <span>Toggle Sidebar To see or Hide Patient QR Code</span>
                     </button>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
@@ -55,26 +60,32 @@
                 <div class="patient-line mx-4"></div>
                 <div class="patient-bio-cont">
                     <div class="patients-info">
-                        <h5 class="header">Patients info</h5>
-                        <p> National ID: <%= patient.national_id %> </p>
-                        <p>telephone:<%= patient.telephone %></p>
-                        <p>blood group:<%= patient.blood_group %></p>
+                      <h5 class="header">First name</h5>
+                        <p class="patient-info"><%= patient.first_name %></p>
+                         <h5 class="header">Last name</h5>
+                        <p class="patient-info"><%= patient.last_name %></p>
+                        <h5 class="header">Age</h5>
+                        <p><%= patient.patient_age %></p>
+                      
+                        
                     </div>
 
                      <div class="birthdate">
-                        <h5 class="header">Birthdate</h5>
-                        <p> 6/6/2001 </p>
-                        <h5 class="header">Weight</h5>
-                        <p> 60 kg </p>
+                        
+                        <h5 class="header">Patient telephone number</h5>
+                        <p>telephone:<%= patient.telephone %></p>
+                        <h5 class="header">Patient Blood Type</h5>
+                        <p>blood group:<%= patient.blood_group %></p>
+                        <small class="text-success"> In case of emergency , please contact the patient's doctor</small>
+                        <small>Doctor:<%= patient.doctor.name %></small>
+                        <small> Number:<%= patient.doctor.phone_number %></small>
+
+                    
+                        
                         
                     </div>
-                    <div class="birthdate">
-                        <h5 class="header">Height</h5>
-                        <p> 181cm</p>
-                        <h5 class="header">Work phone</h5>
-                        <p> +254790841979 </p>
-                        
-                    </div>
+                    
+                    
 
                 </div>
 
@@ -83,30 +94,78 @@
         <div class="container text-center">
   <div class="more-info">
     <div class="medical-history">
-      <h5 class="header">Medical History</h5>
-      <p> General medical history </p>
+      <h5 class="header">Food Allergy</h5>
+        <p> <%= patient.food_allergies.any? ? patient.food_allergies.map(&:name).join(", ") : "No food allergies" %> </p>
+ 
     </div>
     <div class="medical-history">
-      <h5 class="header--blue">Medical History</h5>
-      <p> General medical history </p>
+      <h5 class="header--blue">Drug Allegries</h5>
+        <p> <%= patient.drug_allergies.any? ? patient.drug_allergies.map(&:name).join(", ") : "No drug allergies" %> </p>
     </div>
     <div class="medical-history">
-      <h5 class="header--purple">Medical History</h5>
-      <p> General medical history </p>
+      <h5 class="header--purple">Pre existing conditions </h5>
+
+        <% patient.pre_existing_conditions.each do |pre_existing_condition| %>
+            <li class="my-1 list-unstyled">
+            <% if pre_existing_condition.diabetes == true %>
+              <button class="btn btn-danger px-3">Patient has history of diabetes</button>
+            <% else %>
+              <button class="btn btn-success px-3">Patient has no history of diabetes</button>
+            <% end %>
+            </li>
+            <li class="my-1 list-unstyled">
+            <% if pre_existing_condition.hypertension == true %>
+              <button class="btn btn-danger px-3">Patient has history of hypertension</button>
+            <% else %>
+              <button class="btn btn-success px-3">Patient has no history of hypertension</button>
+            <% end %>
+            </li>
+            <li class="my-1 list-unstyled">
+            <% if pre_existing_condition.asthma == true %>
+              <button class="btn btn-danger px-3">Patient has history of asthma</button>
+            <% else %>
+              <button class="btn btn-success px-3">Patient has no history of asthma</button>
+            <% end %>
+            </li>
+            <%= link_to "Change Pre Existing Condition Status", edit_patient_pre_existing_condition_path(patient, pre_existing_condition) , class: "text-dark" %>
+          <% end %>
+    
     </div>
     <div class="medical-history">
-      <h5 class="header--light">Medical History</h5>
-      <p> General medical history </p>
+      <h5 class="header--light">Next of Kin</h5>
+
+        <%if patient.next_of_kins.any? %>
+                       <% patient.next_of_kins.each.with_index(1) do |kin, index| %>
+                        <h6 class="header">Next of Kin <%= index %></h6>
+                        <p> Name: <%= kin.name %> </small>
+                       <small>  Phone Number: <%= kin.phone_number %> </small>
+                     <small>   Relation: <%= kin.relation %> </small>
+                     
+                        <% end %>
+                       
+                        <% end %>
+
+
     </div>
+   
 </div>
     </div>
+
+    <div class="container text-center my-3">
+    <button class="btn btn-light"><%= link_to "Add food allergy" , new_patient_food_allergy_path(@patient) %></button>
+    <button class="btn btn-light ms-5"><%= link_to "Add drug allergy" , new_patient_drug_allergy_path(@patient) %></button>
+    <% if @patient.pre_existing_condition_count == 0 %>
+    <%= link_to "Add pre existing condition" , new_patient_pre_existing_condition_path(@patient) %>
+    <% end %>
+    <button class="btn btn-light ms-5"><%= link_to "Add next of kin" , new_patient_next_of_kin_path(@patient) %></button>
+
+</div>
 
 </div>
                 
 
 </div>
 
-
-    </div>
+</div>
 
 
