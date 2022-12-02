@@ -37,7 +37,7 @@
 
                     <button type="button" id="sidebarCollapse" class="btn btn-info">
                         <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar</span>
+                        <span>Toggle Sidebar To see or Hide Patient QR Code</span>
                     </button>
                     <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fas fa-align-justify"></i>
@@ -64,21 +64,27 @@
                         <p class="patient-info"><%= patient.first_name %></p>
                          <h5 class="header">Last name</h5>
                         <p class="patient-info"><%= patient.last_name %></p>
-                        <h5 class="header">Patients info</h5>
-                        <p> National ID: <%= patient.national_id %> </p>
+                        <h5 class="header">Age</h5>
+                        <p><%= patient.patient_age %></p>
+                      
                         
                     </div>
 
                      <div class="birthdate">
-                        <h5 class="header">Age</h5>
-                        <p><%= patient.patient_age %></p>
+                        
                         <h5 class="header">Patient telephone number</h5>
                         <p>telephone:<%= patient.telephone %></p>
                         <h5 class="header">Patient Blood Type</h5>
                         <p>blood group:<%= patient.blood_group %></p>
+                        <small class="text-success"> In case of emergency , please contact the patient's doctor</small>
+                        <small>Doctor:<%= patient.doctor.name %></small>
+                        <small> Number:<%= patient.doctor.phone_number %></small>
+
+                    
                         
                         
                     </div>
+                    
                     
 
                 </div>
