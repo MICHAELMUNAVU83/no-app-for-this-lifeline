@@ -6,12 +6,12 @@
       <%= image_tag "lifeline-logo-white.png" , class: "logo-img" %>
   </div>
 
-            <ul class="list-unstyled components text-light ">
-               
+            <ul class="list-unstyled components text-light hide">
+
                 <li>
                     <%= link_to "Home", authenticated_root_path , class:"text-decoration-none text-light" %>
                </li>
-              
+
               <li>
                 <%= link_to "Add A Patient" , new_patient_path , class:"text-decoration-none text-light" %>
              </li>
@@ -32,20 +32,7 @@
         <!-- Page Content  -->
         <div id="content" class="container">
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar To see or Hide Patient QR Code</span>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-
-                 
-                </div>
-            </nav>
+            <%= render "layouts/navbar" %>
 
             <div class="container-fluid patient-page">
     <div class="">
@@ -53,7 +40,7 @@
             <div class="patient-details d-flex">
                 <div class="patient-header">
                     <div class="patient-image d-flex flex-column align-items-center">
-                        <%= image_tag patient.image, class: "img-fluid", style: "width: 100px; height: 100px; border-radius: 50%;" %>
+                        <%= image_tag patient.image, class: "image-fluid", style: "width: 100px; height: 100px; border-radius: 50%;" %>
                         <h4 class="patient-name text-center mx-3"><%= patient.first_name %> <%= patient.last_name %></h4>
                     </div>
                 </div>
@@ -66,12 +53,12 @@
                         <p class="patient-info"><%= patient.last_name %></p>
                         <h5 class="header">Age</h5>
                         <p><%= patient.patient_age %></p>
-                      
-                        
+
+
                     </div>
 
                      <div class="birthdate">
-                        
+
                         <h5 class="header">Patient telephone number</h5>
                         <p>telephone:<%= patient.telephone %></p>
                         <h5 class="header">Patient Blood Type</h5>
@@ -80,12 +67,12 @@
                         <small>Doctor:<%= patient.doctor.name %></small>
                         <small> Number:<%= patient.doctor.phone_number %></small>
 
-                    
-                        
-                        
+
+
+
                     </div>
-                    
-                    
+
+
 
                 </div>
 
@@ -96,7 +83,7 @@
     <div class="medical-history">
       <h5 class="header">Food Allergy</h5>
         <p> <%= patient.food_allergies.any? ? patient.food_allergies.map(&:name).join(", ") : "No food allergies" %> </p>
- 
+
     </div>
     <div class="medical-history">
       <h5 class="header--blue">Drug Allegries</h5>
@@ -129,7 +116,7 @@
             </li>
             <%= link_to "Change Pre Existing Condition Status", edit_patient_pre_existing_condition_path(patient, pre_existing_condition) , class: "text-dark" %>
           <% end %>
-    
+
     </div>
     <div class="medical-history">
       <h5 class="header--light">Next of Kin</h5>
@@ -140,14 +127,14 @@
                         <p> Name: <%= kin.name %> </small>
                        <small>  Phone Number: <%= kin.phone_number %> </small>
                      <small>   Relation: <%= kin.relation %> </small>
-                     
+
                         <% end %>
-                       
+
                         <% end %>
 
 
     </div>
-   
+
 </div>
     </div>
 
@@ -162,7 +149,7 @@
 </div>
 
 </div>
-                
+
 
 </div>
 
