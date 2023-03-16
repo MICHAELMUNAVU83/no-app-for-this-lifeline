@@ -29,7 +29,7 @@ class Patient < ApplicationRecord
                      action: 'show',
                      id: id,
                      only_path: false,
-                     host: 'https://arsenaltop.herokuapp.com/',
+                     host: 'https://lifeline.herokuapp.com/',
                      source: 'from_qr')
     qrcode = RQRCode::QRCode.new(qr_url)
 
