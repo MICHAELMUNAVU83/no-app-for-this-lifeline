@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary ">
                         <% if current_page?(authenticated_root_path) %>
-                            <span "><%= fa_icon "bars" %></>
+                            <span ><%= fa_icon "bars" %></>
                         <% else %>
                             <%= link_to authenticated_root_path do %>
-                                <span "><%= fa_icon "home", class:"home-icon" %><%=link_to "Home", authenticated_root_path , class:"text-decoration-none text-light mx-3" %></>
+                                <span ><%= fa_icon "home", class:"home-icon" %><%=link_to "Home", authenticated_root_path , class:"text-decoration-none text-light mx-3" %></>
 
                             <% end %>
                         <% end %>

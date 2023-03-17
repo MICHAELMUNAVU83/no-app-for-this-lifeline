@@ -1,7 +1,7 @@
 
 <div class="wrapper">
         <!-- Sidebar  -->
-        <nav id="sidebar">
+        <nav id="sidebar" class="bg-primary">
            <div class="splash-image">
       <%= image_tag "lifeline-logo-white.png" , class: "logo-img" %>
   </div>
@@ -35,23 +35,27 @@
             <%= render "layouts/navbar" %>
 
             <div class="container-fluid patient-page">
-    <div class="">
-        <section class="patient-main">
-            <div class="patient-details d-flex">
-                <div class="patient-header">
-                    <div class="patient-image d-flex flex-column align-items-center">
-                        <%= image_tag patient.image, class: "image-fluid", style: "width: 100px; height: 100px; border-radius: 50%;" %>
-                        <h4 class="patient-name text-center mx-3"><%= patient.first_name %> <%= patient.last_name %></h4>
+    <div >
+        <section class="flex-row d-flex">
+            <div class=" mb-2  d-flex">
+                <div class="bg-primary py-2  h-400px ">
+                    <div class="patient-image   d-flex flex-column align-items-center">
+                        <%= image_tag patient.image, style: "width: 150px; height: 150px; border-radius: 90%;" %>
+                        <h4 class="d-flex flex-row font-weight-light text-light text-center mx-3"><%= patient.first_name %> <%= patient.last_name %></h4>
+                        <div class="d-flex w-100 flex-column bg-light">
+                        <h4 class=" text-primary w-100 text-center ">Age : <%= patient.patient_age %> </h4>
+                         <h4 class=" text-primary w-100 text-center ">Blood Type : <%= patient.blood_group %> </h4>
+                         </div>
                     </div>
                 </div>
                 <div class="patient-line mx-4"></div>
                 <div class="patient-bio-cont">
                     <div class="patients-info">
-                      <h5 class="header">First name</h5>
+                      <h5 class="text-primary">First name</h5>
                         <p class="patient-info"><%= patient.first_name %></p>
-                         <h5 class="header">Last name</h5>
+                         <h5 class="text-primary">Last name</h5>
                         <p class="patient-info"><%= patient.last_name %></p>
-                        <h5 class="header">Age</h5>
+                        <h5 class="text-primary">Age</h5>
                         <p><%= patient.patient_age %></p>
 
 
@@ -59,18 +63,21 @@
 
                      <div class="birthdate">
 
-                        <h5 class="header">Patient telephone number</h5>
+                        <h5 class="text-primary">Patient telephone number</h5>
                         <p>telephone:<%= patient.telephone %></p>
-                        <h5 class="header">Patient Blood Type</h5>
+                        <h5 class="text-primary">Patient Blood Type</h5>
                         <p>blood group:<%= patient.blood_group %></p>
-                        <small class="text-success"> In case of emergency , please contact the patient's doctor</small>
-                        <small>Doctor:<%= patient.doctor.name %></small>
-                        <small> Number:<%= patient.doctor.phone_number %></small>
-
+                       
 
 
 
                     </div>
+
+                    <div>
+                     <h5 class="text-primary"> In case of emergency , please contact the patient's doctor</h5>
+                        <h6 class="text-secondary">Doctor:<%= patient.doctor.name %></h6>
+                        <h6 class="text-secondary"> Number:<%= patient.doctor.phone_number %></h6>
+</div>
 
 
 
@@ -78,8 +85,8 @@
 
 
         </section>
-        <div class="container text-center">
-  <div class="more-info">
+        <div class="container text-center mt-5">
+  <div class="more-info mt-4">
     <div class="medical-history">
       <h5 class="header">Food Allergy</h5>
         <p> <%= patient.food_allergies.any? ? patient.food_allergies.map(&:name).join(", ") : "No food allergies" %> </p>
@@ -90,7 +97,9 @@
         <p> <%= patient.drug_allergies.any? ? patient.drug_allergies.map(&:name).join(", ") : "No drug allergies" %> </p>
     </div>
     <div class="medical-history">
-      <h5 class="header--purple">Pre existing conditions </h5>
+      <h5 class="header--purple ">Pre existing conditions </h5>
+
+       <%if patient.pre_existing_conditions.any? %>
 
         <% patient.pre_existing_conditions.each do |pre_existing_condition| %>
             <li class="my-1 list-unstyled">
@@ -117,6 +126,11 @@
             <%= link_to "Change Pre Existing Condition Status", edit_patient_pre_existing_condition_path(patient, pre_existing_condition) , class: "text-dark" %>
           <% end %>
 
+          <% else %>
+
+          <p> No Pre Existing Condition Added </p>
+          <% end %>
+
     </div>
     <div class="medical-history">
       <h5 class="header--light">Next of Kin</h5>
@@ -130,7 +144,10 @@
 
                         <% end %>
 
+                        <% else %>
+                        <p> No Next of Kin Added </p>
                         <% end %>
+
 
 
     </div>
