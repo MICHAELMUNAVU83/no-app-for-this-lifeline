@@ -1,98 +1,55 @@
+# Project Title
+LIFELINE MEDICAL RECORDS
 
-# Lifeline Medical
+## Demo link:
+Access the live site  [here](https://lifeline.herokuapp.com/)
+And Login with email `michael@gmail.com` and password `123456` .
 
-Lifeline medical records is a solution that is used to create, update and read medical records whenever necessary.
+## Table of Content:
 
-# ERD
-![ERD Diagram1 (2)](https://user-images.githubusercontent.com/48310207/201509109-1173932a-9df2-49ab-bf94-31e20ec3fb17.jpg)
+- [About The App](#about-the-app)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Setup](#setup)
 
-## Cloning the Project
-git clone https://github.com/valuechainfactory/team_Limon_arsenal_life_line.git
+- [Credits](#credits)
 
-```bash
-- cd team_Limon_arsenal_life_line
-- rails s
-```
 
-## Built with
-Ruby 3.1.2 on Rails 7.0.4 <br>
-PostgreSQL
+## About The App
+[Lifeline] is a medical record data that allows users to quickly access
+            their medical records. It is built with Ruby on Rails and Bootstrap
+            CSS. It has a user authentication system and a each patient's data
+            is saved as a QR code that can be scanned by a doctor and also
+            embedded into a NFC tag .
 
-## Prerequisites
-Vscode or anyother Setup
+## Screenshots
 
-## Install
-Ruby
-Rails
-PostgreSql
+![1](https://user-images.githubusercontent.com/86654131/226240224-37185b79-d3ab-4798-9eab-03b3294428a2.png)
 
-## Development Database
-```bash
-# Sign into posgresql
-su - postgres
 
-# Create user
-create user 'user_name' with encrypted password 'mypassword'
+![2](https://user-images.githubusercontent.com/86654131/226240231-39aab1b8-b5ac-4bcc-9aeb-56b43851cee6.png)
 
-# Load the schema
-rails db:schema:load
 
-#----- If you want prefer this approach
-# Create the database
-rake db:create
 
-# Create database Migration
-rails db:migrate
-```
 
-## Run
-```bash 
-bundle install
+## Technologies
+I used `Ruby on Rails` and `Boostrap`
 
-rails s
-```
-## Run tests
-```bash
-bundle install
-rspec
-```
+## Setup
+- download or clone the repository
+- run `bundle i`
+- run `rails db:create`
+- run `rails db:migrate`
+- run `rails s`
+.
 
-## Authors
 
-👤 **Joy Kwamboka**
 
-- Github: [@kwambiee](https://github.com/kwambiee)
-- Twitter: [@kwambiee](https://twitter.com/kwambiee)
-- Linkedin: [Joy Kwamboka](https://www.linkedin.com/in/joy-kwamboka)
+## Credits
+👤 **MICHAEL MUNAVU**
 
-👤 **AbolGer**
+- GitHub: [@githubhandle](https://github.com/MICHAELMUNAVU83)
+- Twitter: [@twitterhandle](https://twitter.com/MichaelTrance1)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/michael-munavu-78703a218/)
 
-- GitHub: [@ger619](https://github.com/ger619)
-- Twitter: [@ger_abol](https://twitter.com/ger_abol)
-- LinkedIn: [David Ger](https://linkedin.com/in/david-ger-426b4576)
-
-👤 **Kiprotich Kimutai**
-
-- GitHub: [@Kimutai01](https://github.com/Kimutai01)
-- Twitter: [@Kimutai_01](https://twitter.com/Kimutai_01?s=09)
-- LinkedIn: [@kiprotichkimutai](https://www.linkedin.com/m/in/kimutai-kiprotich-1b5045216)
-
-👤 **Michael Munavu**
-
-- GitHub: [@MICHAELMUNAVU83](https://github.com/MICHAELMUNAVU83)
-- Twitter: [@twitterhandle](https://twitter.com/MichealTrance1)
-- LinkedIn: [Micheal-munavu](https://www.linkedin.com/in/michael-munavu/)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-Feel free to check the [Issues](https://github.com/MICHAELMUNAVU83/no-app-for-this-lifeline/issues).
-
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
 
